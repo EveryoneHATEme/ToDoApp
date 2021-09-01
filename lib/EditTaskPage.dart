@@ -15,16 +15,19 @@ class EditTaskPage extends StatelessWidget {
         title: const Text('Edit Task')
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          TextField(
-            controller: textController,
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: TextField(
+              controller: textController,
+            ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               ElevatedButton(
                 onPressed: () => _returnChanges(context),
-                child: const Text('Add')
+                child: const Text('Add'),
               ),
               ElevatedButton(
                 onPressed: () => _returnWithoutChanges(context),
